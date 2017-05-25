@@ -6,10 +6,12 @@
     - "{{ ansible_os_family }}.yml"
 
 - name: Install Airflow
-  command: sudo env "PATH=$PATH" {{ pip }} install airflow
+  become: yes
+  command: env "PATH=$PATH" {{ pip }} install airflow
 
 - name: Install Airflow Extra Packages
-  command: sudo env "PATH=$PATH" {{ pip }} install airflow[{{ item }}]
+  become: yes
+  command: env "PATH=$PATH" {{ pip }} install airflow[{{ item }}]
   with_items: '{{airflow_extra_packages}}'
   when: airflow_extra_packages is defined
 

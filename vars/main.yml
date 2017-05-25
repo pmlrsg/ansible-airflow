@@ -6,3 +6,8 @@ python: python{{python_target_version}}
 pip: pip{{python_target_version}}
 
 airflow_extra_packages:
+- celery
+- crypto
+- password
+- postgres
+- rabbitmq

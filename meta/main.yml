@@ -20,5 +20,5 @@ galaxy_info:
     - application
     - webserver
 
-dependencies:
-  - kyungw00k.python27
+# dependencies:
+#   - kyungw00k.python27
