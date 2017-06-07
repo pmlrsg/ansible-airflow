@@ -10,4 +10,3 @@ airflow_extra_packages:
 - crypto
 - password
 - postgres
-- rabbitmq
