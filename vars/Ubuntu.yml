@@ -1,0 +1,4 @@
+---
+package_python_extras:
+  - libffi6
+  - libffi-dev

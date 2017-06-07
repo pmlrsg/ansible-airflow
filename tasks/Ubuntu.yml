@@ -1,0 +1,15 @@
+---
+- include_vars: "Ubuntu.yml"
+
+- name : Install Development Tools
+  package : name={{ item }} state=latest
+  with_items:
+    - build-essential
+    - gcc
+    - g++
+  become: yes
+
+- name : Install Extra Libraries
+  package : name={{ item }} state=latest
+  with_items: '{{ package_python_extras }}'
+  become: yes
