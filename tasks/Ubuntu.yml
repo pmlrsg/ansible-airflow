@@ -13,3 +13,6 @@
   package : name={{ item }} state=latest
   with_items: '{{ package_python_extras }}'
   become: yes
+
+- name: Install redis library (Ubuntu only)
+  command: pip install redis
