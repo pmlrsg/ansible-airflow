@@ -21,7 +21,7 @@ airflow_executor: "CeleryExecutor"
 # The SqlAlchemy connection string to the metadata database.
 # SqlAlchemy supports many different database engine, more information
 # their website
-airflow_sql_alchemy_conn: "postgresql://airflow:FAN8Ii5IWOEo@pgsql.npm.ac.uk:5432/airflow"
+airflow_sql_alchemy_conn: sqlite:///{AIRFLOW_HOME}/airflow.db
 
 # The SqlAlchemy pool size is the maximum number of database connections
 # in the pool.
@@ -54,8 +54,8 @@ airflow_load_examples: False
 # Where your Airflow plugins are stored
 airflow_plugins_folder: "{{airflow_home}}/plugins"
 
-# Secret key to save connection passwords in the db
-airflow_fernet_key: xyIjRIoNGPuHvrhdqdlbaHhaTA3SPpxoUWO4YHQgr2XbZpt9Vqw4CUYoBfmpRoJkewEQXUHUJkaSwENBVXa19ypIZ8dlWytFgGViydZnLqeRVChPytAAHlgZ77cf8X3Z
+# Secret key to save connection passwords in the db; this has to be base64-encoded 32-byte key
+airflow_fernet_key: U2dsUmlFZUtCNmdzcGdQQmp1ZVBlWTcyeVpBdmVBRmU=
 
 # Whether to disable pickling dags
 airflow_donot_pickle: False
